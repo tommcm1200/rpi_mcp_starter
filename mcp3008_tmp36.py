@@ -13,6 +13,12 @@
 import spidev
 import time
 import os
+import RPi.GPIO as GPIO
+
+#GPIO Setup
+GPIO.setmode(GPIO.BCM
+chan_list = [26])
+GPIO.setup(chan_list, GPIO.OUT)
 
 # Open SPI bus
 spi = spidev.SpiDev()
@@ -80,8 +86,12 @@ while True:
 
   if temp > 20:
     print('ALARM: HIGH Temp')
+    # Turn LED On
+    GPIO.output(26,True)
   else:
     print ('Normal TEMP')
+    # Turn LED Off
+    GPIO.output(26,False)
 
   # Print out results
   print("Light : {} ({}V)".format(light_level,light_volts))  
