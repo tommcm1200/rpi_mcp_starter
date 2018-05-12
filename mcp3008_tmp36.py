@@ -17,7 +17,7 @@ import RPi.GPIO as GPIO
 
 #GPIO Setup
 GPIO.setmode(GPIO.BCM
-chan_list = [26])
+chan_list = ([26])
 GPIO.setup(chan_list, GPIO.OUT)
 
 # Open SPI bus
