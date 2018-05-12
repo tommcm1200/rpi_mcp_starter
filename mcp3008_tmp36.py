@@ -80,7 +80,7 @@ while True:
 
   if temp < 20:
     print('ALARM: HIGH Temp')
-  else 
+  else:
     print ('Normal TEMP')
 
   # Print out results
