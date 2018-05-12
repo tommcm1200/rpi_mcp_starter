@@ -78,16 +78,16 @@ while True:
   temp_volts = ConvertVolts(temp_level,2)
   temp       = ConvertTemp(temp_level,2)
 
-  if temp < 20:
+  if temp > 20:
     print('ALARM: HIGH Temp')
   else:
     print ('Normal TEMP')
 
   # Print out results
-  print "--------------------------------------------"  
   print("Light : {} ({}V)".format(light_level,light_volts))  
   print("Temp  : {} ({}V) {} deg C".format(temp_level,temp_volts,temp))    
-
+  print "--------------------------------------------"
+  
   # Wait before repeating loop
   time.sleep(delay)
  
