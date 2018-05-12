@@ -16,10 +16,10 @@ import os
 import RPi.GPIO as GPIO
 
 #GPIO Setup
-GPIO.setmode(GPIO.BCM
-# chan_list = ([26])
-# GPIO.setup(chan_list, GPIO.OUT)
-GPIO.setup(26, GPIO.OUT)
+GPIO.setmode(GPIO.BCM)
+chan_list = ([26])
+GPIO.setup(chan_list, GPIO.OUT)
+# GPIO.setup(26, GPIO.OUT)
 
 # Open SPI bus
 spi = spidev.SpiDev()
