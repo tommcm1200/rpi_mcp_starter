@@ -78,6 +78,11 @@ while True:
   temp_volts = ConvertVolts(temp_level,2)
   temp       = ConvertTemp(temp_level,2)
 
+  if temp < 20:
+    print('ALARM: HIGH Temp')
+  else 
+    print ('Normal TEMP')
+
   # Print out results
   print "--------------------------------------------"  
   print("Light : {} ({}V)".format(light_level,light_volts))  
